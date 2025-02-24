@@ -612,9 +612,11 @@ object frmCad_Clientes: TfrmCad_Clientes
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 1
+    ExplicitLeft = 56
+    ExplicitTop = 345
     object QRP_relclientes: TQuickRep
-      Left = 41
-      Top = 6
+      Left = 160
+      Top = 30
       Width = 1123
       Height = 794
       ShowingPreview = False
@@ -1513,82 +1515,97 @@ object frmCad_Clientes: TfrmCad_Clientes
         BandType = rbSummary
       end
     end
-    object grd_Clientes: TcxGrid
+    object dbg_Clientes: TDBGrid
       Left = 0
       Top = 0
       Width = 1268
       Height = 289
       Align = alClient
-      TabOrder = 0
-      LookAndFeel.NativeStyle = True
-      ExplicitLeft = 74
-      ExplicitTop = 40
-      object grd_ClientesDBTableView1: TcxGridDBTableView
-        Navigator.Buttons.CustomButtons = <>
-        DataController.DataSource = ds_CadClientes
-        DataController.Summary.DefaultGroupSummaryItems = <>
-        DataController.Summary.FooterSummaryItems = <>
-        DataController.Summary.SummaryGroups = <>
-        OptionsData.CancelOnExit = False
-        OptionsData.Deleting = False
-        OptionsData.DeletingConfirmation = False
-        OptionsData.Editing = False
-        OptionsData.Inserting = False
-        OptionsView.GroupByBox = False
-        object grd_ClientesCodigo: TcxGridDBColumn
-          Caption = 'C'#243'd.'
-          DataBinding.FieldName = 'CODIGO'
-          Width = 43
+      DataSource = ds_CadClientes
+      TabOrder = 1
+      TitleFont.Charset = DEFAULT_CHARSET
+      TitleFont.Color = clWindowText
+      TitleFont.Height = -11
+      TitleFont.Name = 'Tahoma'
+      TitleFont.Style = []
+      Columns = <
+        item
+          Expanded = False
+          FieldName = 'CODIGO'
+          Title.Caption = 'C'#243'digo'
+          Visible = True
         end
-        object grd_ClientesCNPJ: TcxGridDBColumn
-          DataBinding.FieldName = 'CNPJ'
+        item
+          Expanded = False
+          FieldName = 'NOME'
+          Title.Caption = 'Nome do Cliente'
+          Visible = True
         end
-        object grd_ClientesTelefone: TcxGridDBColumn
-          Caption = 'Telefone'
-          DataBinding.FieldName = 'TELEFONE'
+        item
+          Expanded = False
+          FieldName = 'ENDERECO'
+          Title.Caption = 'Endere'#231'o'
+          Width = 423
+          Visible = True
         end
-        object grd_ClientesNome: TcxGridDBColumn
-          Caption = 'Nome do Cliente'
-          DataBinding.FieldName = 'NOME'
-          Width = 505
+        item
+          Expanded = False
+          FieldName = 'BAIRRO'
+          Title.Caption = 'Bairro'
+          Width = 206
+          Visible = True
         end
-        object grd_ClientesEndereco: TcxGridDBColumn
-          Caption = 'Endere'#231'o'
-          DataBinding.FieldName = 'ENDERECO'
-          Width = 375
+        item
+          Expanded = False
+          FieldName = 'CIDADE'
+          Title.Caption = 'Cidade'
+          Width = 217
+          Visible = True
         end
-        object grd_ClientesNumero: TcxGridDBColumn
-          Caption = 'Nro.'
-          DataBinding.FieldName = 'NUMERO'
-          Width = 46
+        item
+          Expanded = False
+          FieldName = 'NUMERO'
+          Title.Caption = 'N'#250'mero'
+          Width = 40
+          Visible = True
         end
-        object grd_ClientesBairro: TcxGridDBColumn
-          DataBinding.FieldName = 'BAIRRO'
+        item
+          Expanded = False
+          FieldName = 'CEP'
+          Visible = True
         end
-        object grd_ClientesCidade: TcxGridDBColumn
-          Caption = 'Cidade'
-          DataBinding.FieldName = 'CIDADE'
+        item
+          Expanded = False
+          FieldName = 'UF'
+          Visible = True
         end
-        object grd_ClientesCodIBGE: TcxGridDBColumn
-          Caption = 'Cod. IBGE'
-          DataBinding.FieldName = 'CODIBGE'
+        item
+          Expanded = False
+          FieldName = 'CNPJ'
+          Width = 93
+          Visible = True
         end
-        object grd_ClientesCEP: TcxGridDBColumn
-          DataBinding.FieldName = 'CEP'
+        item
+          Expanded = False
+          FieldName = 'CODIBGE'
+          Title.Caption = 'Cod. IBGE'
+          Width = 53
+          Visible = True
         end
-        object grd_ClientesUF: TcxGridDBColumn
-          DataBinding.FieldName = 'UF'
+        item
+          Expanded = False
+          FieldName = 'TELEFONE'
+          Title.Caption = 'Telefone'
+          Width = 93
+          Visible = True
         end
-        object grd_ClientesLongitudelatitude: TcxGridDBColumn
-          Caption = 'Latitude/Longitude'
-          DataBinding.FieldName = 'LATLONG'
-          MinWidth = 100
-          Width = 326
-        end
-      end
-      object grd_ClientesLevel1: TcxGridLevel
-        GridView = grd_ClientesDBTableView1
-      end
+        item
+          Expanded = False
+          FieldName = 'LATLONG'
+          Title.Caption = 'Latitude_Longitude'
+          Width = 332
+          Visible = True
+        end>
     end
   end
   object ds_CadClientes: TDataSource

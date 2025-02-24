@@ -25,7 +25,6 @@ object frmRelClientes: TfrmRelClientes
     Align = alTop
     BevelOuter = bvNone
     TabOrder = 0
-    ExplicitTop = -6
     object Btn_Imprimir: TButton
       Left = 775
       Top = 32
@@ -133,10 +132,6 @@ object frmRelClientes: TfrmRelClientes
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 1
-    ExplicitLeft = 208
-    ExplicitTop = 136
-    ExplicitWidth = 849
-    ExplicitHeight = 345
     object QRP_relclientes: TQuickRep
       Left = 10
       Top = 61
@@ -1095,7 +1090,6 @@ object frmRelClientes: TfrmRelClientes
         item
           Expanded = False
           FieldName = 'CEP'
-          Width = 64
           Visible = True
         end
         item

@@ -58,18 +58,6 @@ type
     DSP_Clientes: TDataSetProvider;
     cxButton1: TcxButton;
     pn_Grid: TPanel;
-    grd_Clientes: TcxGrid;
-    grd_ClientesDBTableView1: TcxGridDBTableView;
-    grd_ClientesCodigo: TcxGridDBColumn;
-    grd_ClientesNome: TcxGridDBColumn;
-    grd_ClientesEndereco: TcxGridDBColumn;
-    grd_ClientesNumero: TcxGridDBColumn;
-    grd_ClientesCidade: TcxGridDBColumn;
-    grd_ClientesCEP: TcxGridDBColumn;
-    grd_ClientesUF: TcxGridDBColumn;
-    grd_ClientesLevel1: TcxGridLevel;
-    grd_ClientesCNPJ: TcxGridDBColumn;
-    grd_ClientesTelefone: TcxGridDBColumn;
     Label10: TLabel;
     Label11: TLabel;
     cxDBTextEdit2: TcxDBTextEdit;
@@ -87,9 +75,6 @@ type
     Label13: TLabel;
     DBEditLogLat: TDBEdit;
     DBEditCNPJ: TcxDBTextEdit;
-    grd_ClientesLongitudelatitude: TcxGridDBColumn;
-    grd_ClientesCodIBGE: TcxGridDBColumn;
-    grd_ClientesBairro: TcxGridDBColumn;
     RESTClient1: TRESTClient;
     RESTRequest1: TRESTRequest;
     RESTResponse1: TRESTResponse;
@@ -150,6 +135,7 @@ type
     SummaryBand1: TQRBand;
     QRLabel13: TQRLabel;
     QRExpr1: TQRExpr;
+    dbg_Clientes: TDBGrid;
     procedure FormCreate(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);

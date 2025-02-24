@@ -40,20 +40,11 @@ Coordinates=840,432,81,58
 [DBEdtNomeCli]
 Coordinates=10,546,101,36
 
-[grd_ClientesCodigo]
-Coordinates=534,485,128,36
-
 [btnEditar]
 Coordinates=787,10,66,58
 
 [pn_Controls]
 Coordinates=1001,364,84,58
-
-[grd_ClientesCidade]
-Coordinates=534,540,128,36
-
-[grd_ClientesEndereco]
-Coordinates=534,595,142,36
 
 [pn_Grid]
 Coordinates=863,10,60,58
@@ -64,9 +55,6 @@ Coordinates=483,432,69,58
 [btnUltimo]
 Coordinates=1199,10,69,58
 
-[grd_ClientesNumero]
-Coordinates=714,1,132,36
-
 [Label10]
 Coordinates=94,432,60,58
 
@@ -75,15 +63,6 @@ Coordinates=226,364,60,58
 
 [Label4]
 Coordinates=384,364,53,58
-
-[grd_ClientesCEP]
-Coordinates=534,650,113,36
-
-[grd_ClientesTelefone]
-Coordinates=714,56,137,36
-
-[grd_ClientesCodIBGE]
-Coordinates=714,111,141,36
 
 [Label5]
 Coordinates=1224,364,53,58
@@ -100,14 +79,8 @@ Coordinates=517,364,60,58
 [DBEdtCEP]
 Coordinates=1054,500,78,36
 
-[grd_ClientesLevel1]
-Coordinates=714,166,125,36
-
 [Label6]
 Coordinates=562,432,53,58
-
-[grd_ClientesLongitudelatitude]
-Coordinates=893,1,185,36
 
 [DBEdtCodigo]
 Coordinates=952,500,92,36
@@ -124,9 +97,6 @@ Coordinates=386,432,87,58
 [DBEdtUF]
 Coordinates=874,500,68,36
 
-[grd_ClientesBairro]
-Coordinates=158,706,121,36
-
 [Label1]
 Coordinates=731,364,53,58
 
@@ -139,23 +109,14 @@ Coordinates=742,432,88,58
 [ds_CadClientes]
 Coordinates=144,1,105,36
 
-[grd_ClientesCNPJ]
-Coordinates=714,221,120,36
-
 [cxButton1]
 Coordinates=234,432,72,58
 
 [btnAnterior]
 Coordinates=931,432,78,58
 
-[grd_ClientesUF]
-Coordinates=714,276,104,36
-
 [DBEditCNPJ]
 Coordinates=669,500,88,36
-
-[grd_ClientesDBTableView1]
-Coordinates=714,386,172,36
 
 [ImageListIco]
 Coordinates=714,441,88,36
@@ -166,17 +127,11 @@ Coordinates=573,500,86,36
 [pn_Clientes]
 Coordinates=694,10,83,58
 
-[grd_Clientes]
-Coordinates=476,500,87,36
-
 [Label8]
 Coordinates=1136,10,53,58
 
 [Panel1]
 Coordinates=10,364,55,58
-
-[grd_ClientesNome]
-Coordinates=714,606,121,36
 
 [Btn_BuscaLogtLat]
 Coordinates=1095,364,119,58
@@ -287,7 +242,7 @@ Coordinates=933,10,103,58
 Coordinates=1229,432,72,36
 
 []
-Coordinates=1119,166,142,36
+Coordinates=476,500,87,36
 
 [QRP_relclientes]
 Coordinates=296,364,78,58
