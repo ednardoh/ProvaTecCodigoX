@@ -1,0 +1,90 @@
+unit uRelClientesVIEW;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, cxGraphics, cxControls,
+  cxLookAndFeels, cxLookAndFeelPainters, cxStyles, cxCustomData, cxFilter,
+  cxData, cxDataStorage, cxEdit, cxNavigator,
+  cxDataControllerConditionalFormattingRulesManagerDialog, Data.DB, cxDBData,
+  Vcl.StdCtrls, cxGridLevel, cxGridCustomTableView, cxGridTableView,
+  cxGridDBTableView, cxClasses, cxGridCustomView, cxGrid, Datasnap.Provider,
+  Datasnap.DBClient, cxCheckBox, uClienteControl, Vcl.Grids, Vcl.DBGrids,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Error, FireDAC.UI.Intf,
+  FireDAC.Phys.Intf, FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Stan.Async,
+  FireDAC.Phys, FireDAC.Phys.FB, FireDAC.Phys.FBDef, FireDAC.VCLUI.Wait,
+  FireDAC.Stan.Param, FireDAC.DatS, FireDAC.DApt.Intf, FireDAC.DApt,
+  FireDAC.Phys.IBBase, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
+
+type
+  TfrmRelClientes = class(TForm)
+    pn_Top: TPanel;
+    Panel1: TPanel;
+    ds_CadClientes: TDataSource;
+    TB_Clientes: TClientDataSet;
+    TB_ClientesCODIGO: TIntegerField;
+    TB_ClientesNOME: TStringField;
+    TB_ClientesENDERECO: TStringField;
+    TB_ClientesBAIRRO: TStringField;
+    TB_ClientesCIDADE: TStringField;
+    TB_ClientesNUMERO: TIntegerField;
+    TB_ClientesCEP: TStringField;
+    TB_ClientesUF: TStringField;
+    TB_ClientesCNPJ: TStringField;
+    TB_ClientesCODIBGE: TStringField;
+    TB_ClientesTELEFONE: TStringField;
+    TB_ClientesLATLONG: TStringField;
+    DSP_Clientes: TDataSetProvider;
+    Btn_Imprimir: TButton;
+    Btn_Close: TButton;
+    dbg_Clientes: TDBGrid;
+    procedure FormShow(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure Btn_CloseClick(Sender: TObject);
+  private
+    { Private declarations }
+    Cliente: TClienteControl;
+    procedure PreencheDataSetCliente;
+  public
+    { Public declarations }
+  end;
+
+var
+  frmRelClientes: TfrmRelClientes;
+
+implementation
+
+{$R *.dfm}
+
+{ TfrmRelClientes }
+
+procedure TfrmRelClientes.Btn_CloseClick(Sender: TObject);
+begin
+  close;
+end;
+
+procedure TfrmRelClientes.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  Action := cafree;
+end;
+
+procedure TfrmRelClientes.FormShow(Sender: TObject);
+begin
+  TB_Clientes.CreateDataSet;
+  PreencheDataSetCliente;
+end;
+
+procedure TfrmRelClientes.PreencheDataSetCliente;
+begin
+  try
+    Cliente:= TClienteControl.Create;
+    DSP_Clientes.DataSet := Cliente.Obter(1,'');
+    TB_Clientes.close;
+    TB_Clientes.Open;
+  finally
+    Cliente.Free;
+  end;
+end;
+
+end.
